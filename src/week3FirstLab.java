@@ -2,8 +2,8 @@ public class week3FirstLab {
 
     public static void main(String[] args) {
         String[][] people = {
-                {"John", "Sara", "Kane", "Sara", "A"},
-                {"Smith", "Doe", "Gregory", "Williams", "Sindi"},
+                {"John", "Sara", "Kane", "Sara", "Sara"},
+                {"Smith", "Doe", "Gregory", "Williams", "A"},
                 {"25", "27", "29", "26", "10"},
                 {"john.smith@gmail.com", "sara.doe@yahoo.com", "k.gregory@gmail.com", "sara.williams@gmail.com", "sara.williams@gmil.com"},
                 {"New York", "Washington", "New York", "Dallas", "Kiev"}
@@ -30,6 +30,14 @@ public class week3FirstLab {
             for (int j = 0; j < people[0].length-i-1; j++) {
                 if (people[0][j].compareTo(people[0][j+1])>0) {
 
+                    swapTwoElements (j,j+1,people[0]);
+                    swapTwoElements (j,j+1,people[1]);
+                    swapTwoElements (j,j+1,people[2]);
+                    swapTwoElements (j,j+1,people[3]);
+                    swapTwoElements (j,j+1,people[4]);
+                }
+
+                else if (people[0][j].compareTo(people[0][j+1])==0 && people[1][j].compareTo(people[1][j+1])>0) {
                     swapTwoElements (j,j+1,people[0]);
                     swapTwoElements (j,j+1,people[1]);
                     swapTwoElements (j,j+1,people[2]);
