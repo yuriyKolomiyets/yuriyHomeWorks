@@ -28,24 +28,35 @@ public class week3FirstLab {
 
     static String[] sortArrayByName (String[][] people) {
 
-        for (int i = 0; i < people[0].length; i++) {
+        for (int i = 0; i < people.length; i++) {
 
-            for (int j = 0; j < people[0].length-i-1; j++) {
+            for (int j = 0; j < people.length-i-1; j++) {
                 if (people[0][j].compareTo(people[0][j+1])>0) {
 
-                    swapTwoElements (j,j+1,people[0]);
+                    for (int k = 0; k < people[0].length; k++) {
+                        swapTwoElements (j,j+1,people[k]);
+
+                    }
+
+                   /* swapTwoElements (j,j+1,people[0]);
                     swapTwoElements (j,j+1,people[1]);
                     swapTwoElements (j,j+1,people[2]);
                     swapTwoElements (j,j+1,people[3]);
-                    swapTwoElements (j,j+1,people[4]);
+                    swapTwoElements (j,j+1,people[4]);*/
                 }
 
                 else if (people[0][j].compareTo(people[0][j+1])==0 && people[1][j].compareTo(people[1][j+1])>0) {
-                    swapTwoElements (j,j+1,people[0]);
+
+                    for (int k1 = 0; k1 < people[0].length; k1++) {
+                        swapTwoElements (j,j+1,people[k1]);
+
+                    }
+
+                    /*swapTwoElements (j,j+1,people[0]);
                     swapTwoElements (j,j+1,people[1]);
                     swapTwoElements (j,j+1,people[2]);
                     swapTwoElements (j,j+1,people[3]);
-                    swapTwoElements (j,j+1,people[4]);
+                    swapTwoElements (j,j+1,people[4]);*/
                 }
             }
 
