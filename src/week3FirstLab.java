@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class week3FirstLab {
 
     public static void main(String[] args) {
@@ -9,19 +11,20 @@ public class week3FirstLab {
                 {"New York", "Washington", "New York", "Dallas", "Kiev"}
         };
 
+        Scanner scanner = new Scanner(System.in);
 
-      //  printAll(people);
-       // findPersonByName("Sara", people);
+        System.out.println("Enter name for seach: ");
+
+        String personName = scanner.next();
+
+       findPersonByName(personName, people);
 
         sortArrayByName(people);
 
         printAll(people);
     }
 
-    //private static void sortArrayByName(String[][] people) {
 
-
-    //}
 
     static String[] sortArrayByName (String[][] people) {
 
