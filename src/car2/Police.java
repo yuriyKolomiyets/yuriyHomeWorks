@@ -14,7 +14,7 @@ public class Police {
             System.out.println(car.model + " " + "Hello");
         } else if (currentSpeed > allowedSpeed) {
             car.stop();
-            System.out.println(car.model + " " + "You break the law motherfucker");
+            System.out.println(car.model + " " + "You break the law motherf@cker");
 
 
             Fine[] penalties = car.penalties;
