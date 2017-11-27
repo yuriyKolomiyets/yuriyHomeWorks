@@ -8,7 +8,7 @@ public class road {
         police.allowedSpeed = 20;
         police.penaltyValue = 255;
 
-        Car car1 = new Car();
+        Car car1 = new Car(250, 30);
         car1.model = "Chevrolet Aveo";
         car1.setMaxSpeed(250);
         car1.penalties = new Fine[1];
@@ -19,12 +19,12 @@ public class road {
         car1.penalties[0] = fine;
 
 
-        Car car2 = new Car();
+        Car car2 = new Car(0,0);
         car2.model = "Bmw X5";
         car2.setMaxSpeed(350);
         car2.penalties = new Fine[0];
 
-        Car car3 = new Car();
+        Car car3 = new Car(0,0);
         car3.model = "Bmw One";
         car3.setMaxSpeed(350);
         car3.penalties = new Fine[1];
