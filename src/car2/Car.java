@@ -1,5 +1,4 @@
 package car2;
-
 public class Car {
 
     private String getModel;
@@ -11,28 +10,20 @@ public class Car {
         this.maxSpeed = maxSpeed;
         this.currentSpeed = currentSpeed;
     }
-
     public String getGetModel() {
         return getModel;
     }
-
     public int getMaxSpeed() {
         return maxSpeed;
     }
-
     public int getCurrentSpeed() {
         return currentSpeed;
     }
-
     Fine[] penalties;
-
-
     void stop() {
         currentSpeed = 0;
         System.out.println(getModel + " " + "Car stoped");
-
     }
-
     void drive(int speed) {
         if (speed <= maxSpeed) {
             currentSpeed = speed;
@@ -41,10 +32,7 @@ public class Car {
             System.out.println(getModel + " " + "cant drive with a speed" + " " + speed);
             stop();
         }
-
     }
-
-
     static double convertSpeedtoMPH(int speedInKmh) {
         return speedInKmh / 1.62;
     }

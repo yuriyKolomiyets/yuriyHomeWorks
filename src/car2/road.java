@@ -1,6 +1,4 @@
 package car2;
-
-
 public class road {
     public static void main(String[] args) {
 
@@ -32,8 +30,6 @@ public class road {
         car3.drive(30);
 
         System.out.println("------");
-
-
         for (Car car : cars) {
             int currentSpeed = car.getCurrentSpeed();
             if (currentSpeed > 0) {
@@ -41,13 +37,8 @@ public class road {
 
                 System.out.println("-----");
             }
-
         }
-
-
     }
-
-
 }
 
 
