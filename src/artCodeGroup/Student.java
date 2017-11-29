@@ -1,10 +1,15 @@
 package artCodeGroup;
 
-public class student {
+public class Student {
     private int userId;
     private String name;
+    private String surname;
+    private String email;
+    private int yearOfBirth;
+    private double moneyPaid;
+    private int countOfTasks;
 
-    public student(int userId, String name, String surname, String email, int yearOfBirth, double moneyPaid, int countOfTasks) {
+    public Student(int userId, String name, String surname, String email, int yearOfBirth, double moneyPaid, int countOfTasks) {
         this.userId = userId;
         this.name = name;
         this.surname = surname;
@@ -13,12 +18,6 @@ public class student {
         this.moneyPaid = moneyPaid;
         this.countOfTasks = countOfTasks;
     }
-
-    private String surname;
-    private String email;
-    private int yearOfBirth;
-    private double moneyPaid;
-    private int countOfTasks;
 
     public int getUserId() {
         return userId;
