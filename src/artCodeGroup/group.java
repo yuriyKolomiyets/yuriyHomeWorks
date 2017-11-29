@@ -18,9 +18,11 @@ public class group {
     // Student student3 = new student(scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt());  а хороша попытка была
 
 
-   // описываю импорт данных со сканера нового студента
+   // tries to make array of all users
 
    Student[] students = new Student[2];
+
+   // tries to make newarray of all users + new
    Student[] newStudent = Arrays.copyOf(students, sudent.length+1);
    Student[] students = newStudent; // кажись тут начехлил с переключением ссылки
 }
