@@ -75,11 +75,12 @@ public class Univers {
         System.out.println("let's print all of them:");
         group1.printAllStudent();
 
-
-        //  Double.parseDouble(name)
+        System.out.println("let's search student:");
+        group1.searchStudent();
 
 
     }
+
 
 
 }

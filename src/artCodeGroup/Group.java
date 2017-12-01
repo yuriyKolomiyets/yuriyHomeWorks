@@ -1,6 +1,7 @@
 package artCodeGroup;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Group {
 
@@ -32,6 +33,23 @@ public class Group {
 
         }
         System.out.println();
+    }
+
+    void searchStudent() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter user name:");
+        String name = scanner.next();
+        for (int d = 0; d < students.length; d++) {
+            if (students[d].getName().equals(name)) {
+                System.out.println(
+                        students[d].getUserId() + " " +
+                                students[d].getName() + " " +
+                                students[d].getSurname() + " " +
+                                students[d].getEmail() + " " +
+                                students[d].getYearOfBirth() + " " +
+                                students[d].getMoneyPaid() + " ");
+            }
+        }
     }
 
     public Student[] getStudents() {
