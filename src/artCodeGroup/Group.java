@@ -13,14 +13,25 @@ public class Group {
     }
 
     void addStudent(Student student) {
-        Student[] newStudents = Arrays.copyOf(students, students.length+1);
-        newStudents[newStudents.length-1] = student;
+        Student[] newStudents = Arrays.copyOf(students, students.length + 1);
+        newStudents[newStudents.length - 1] = student;
         students = newStudents;
         counterNumsofStudent++;
     }
 
     void printAllStudent() {
-        //loop
+        for (int i = 0; i < students.length; i++) {
+            System.out.println(
+                    students[i].getUserId() + " " +
+                    students[i].getName() + " " +
+                    students[i].getSurname() + " " +
+                    students[i].getEmail() + " " +
+                    students[i].getYearOfBirth() + " " +
+                    students[i].getMoneyPaid() + " "
+            );
+
+        }
+        System.out.println();
     }
 
     public Student[] getStudents() {
