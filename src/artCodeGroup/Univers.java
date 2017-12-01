@@ -69,7 +69,6 @@ public class Univers {
                 new Student(5, "Ivan", "Iakovlev", "asdf@sdfg.ru", 1989, 0, 0),
         });
 
-
         System.out.println("Total students in the group: " + group1.getCounterNumsofStudent());
 
         System.out.println("let's print all of them:");
@@ -85,8 +84,6 @@ public class Univers {
         group1.printAllStudent();
 
     }
-
-
 
 }
 

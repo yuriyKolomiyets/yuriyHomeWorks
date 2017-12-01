@@ -24,11 +24,11 @@ public class Group {
         for (int i = 0; i < students.length; i++) {
             System.out.println(
                     students[i].getUserId() + " " +
-                    students[i].getName() + " " +
-                    students[i].getSurname() + " " +
-                    students[i].getEmail() + " " +
-                    students[i].getYearOfBirth() + " " +
-                    students[i].getMoneyPaid() + " "
+                            students[i].getName() + " " +
+                            students[i].getSurname() + " " +
+                            students[i].getEmail() + " " +
+                            students[i].getYearOfBirth() + " " +
+                            students[i].getMoneyPaid() + " "
             );
 
         }
@@ -56,14 +56,14 @@ public class Group {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter user name to delete:");
         String delName = scanner.next();
-        Student[] newStudents = new Student[students.length-1];
+        Student[] newStudents = new Student[students.length - 1];
         int index = 0;
 
-        for (int d = 0; d < students.length-1; d++) {
+        for (int d = 0; d < students.length - 1; d++) {
             if (!students[d].getName().equals(delName)) {
 
-                    newStudents[index] = students[d];
-                    index++;
+                newStudents[index] = students[d];
+                index++;
             }
 
             students = newStudents;
