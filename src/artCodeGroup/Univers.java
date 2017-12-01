@@ -77,7 +77,12 @@ public class Univers {
 
         System.out.println("let's search student:");
         group1.searchStudent();
+        System.out.println("let's del student:");
+        group1.deleteStudent();
+        System.out.println("Total students in the group: " + group1.getCounterNumsofStudent());
 
+        System.out.println("let's print all of them:");
+        group1.printAllStudent();
 
     }
 
