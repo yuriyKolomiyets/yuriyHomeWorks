@@ -1,9 +1,11 @@
 package phoneBook;
 
+import java.util.Scanner;
+
 public class Smartphone {
 
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Phonebook phonebook1 = new Phonebook(new Friend[]{
                 new Friend(1, "Slava", "0509876543", 1988, 83),
@@ -11,6 +13,12 @@ public class Smartphone {
                 new Friend(3, "Fisa", "2345", 1988, 55)
         });
 
-        phonebook1.printAll( );
-}
+        phonebook1.printAll();
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter user name for seach:");
+        String name = scanner.next();
+        phonebook1.searchUser(name);
+    }
 }
