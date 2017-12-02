@@ -40,15 +40,22 @@ public class Phonebook {
 
     void searchUser(String name) {
         System.out.println("Searching user" + " " + name);
-
+        int result = 0;
         for (int i = 0; i < friends.length; i++) {
-            if (friends[i].getUserName().equals(name)) {
+            if (friends[i].getUserName().equalsIgnoreCase(name)) {
                 System.out.println("User Found: " +
                         friends[i].getUserId() + ", " + friends[i].getUserName() + ", " +
                         friends[i].getUserPhoneNumber() + ", " + friends[i].getUserYearOfBirth() + ", " +
                         friends[i].getUserWeight()
                 );
+                result++;
             }
+        }
+        if (result == 0) {
+            System.out.println("No user" + " " + name + " " + "found" );
+        }
+        else {
+            System.out.println("Total" + " " + result + " " + "user(s) " + name + " " + "found" );
         }
     }
 
