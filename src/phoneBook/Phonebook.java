@@ -1,5 +1,7 @@
 package phoneBook;
 
+import java.util.Arrays;
+
 public class Phonebook {
 
     private int countOfFriends;
@@ -25,6 +27,14 @@ public class Phonebook {
 
     public void setFriends(Friend[] friends) {
         this.friends = friends;
+    }
+
+    void addUser(Friend friend) {
+        Friend[] newFriends = Arrays.copyOf(friends, friends.length+1);
+        newFriends[friends.length] = friend;
+        friends = newFriends;
+        countOfFriends++;
+
     }
 
     void printAll() {
