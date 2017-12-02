@@ -53,8 +53,8 @@ public class Smartphone {
 
             if (menu == 4) {
                 System.out.println("Enter user name for del:");
-                String name = scanner.next();
-                phonebook1.delUser(name);
+                String delName = scanner.next();
+                phonebook1.delUser(delName);
             }
 
             if (menu == 0) {

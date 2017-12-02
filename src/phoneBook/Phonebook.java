@@ -1,5 +1,7 @@
 package phoneBook;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
 import java.util.Arrays;
 
 public class Phonebook {
@@ -37,17 +39,32 @@ public class Phonebook {
 
     }
 
-    void delUser(String name) {
+    void delUser(String delName) {
         Friend[] newFriends = new Friend[friends.length-1];
         int counter = 0;
-        for (int i = 0; i < newFriends.length-1; i++)
-        if (!friends[i].equals(name)){
-            newFriends[counter] = friends[i];
+        for (int i = 0; i < newFriends.length; i++)
+        if (!friends[i].getUserName().equals(delName)){
+            newFriends[counter] = friends[i];   // я так понимаю что проблема в том что тут я
+                                                // указываю на объект, который потом же затираю
+                                                //при переключении ссылки
             counter++;
         }
         friends = newFriends;
         countOfFriends--;
 
+        /*Friend[] newFriends = new Friend[friends.length-1];
+        int removedIdx = -1;
+        for (int i = 0; i < friends.length; i++) {
+            if (friends[i].getUserName().equals(delName)) {
+                removedIdx = i;
+            }
+        }
+
+        if(removedIdx >= 0 ) {
+            System.arraycopy(friends, removedIdx + 1, newFriends, removedIdx, friends.length - 1 - removedIdx);
+        }
+        friends = newFriends;
+        countOfFriends--;*/
     }
 
     void printAll() {
