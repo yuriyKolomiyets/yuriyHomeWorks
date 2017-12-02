@@ -23,6 +23,7 @@ public class Smartphone {
                     "Press 1 to add new friend: " + "\n" +
                     "Press 2 to Print all phonebook: " + "\n" +
                     "Press 3 to Search user in the phonebook: " + "\n" +
+                    "Press 4 to Del user in the phonebook: " + "\n" +
                     "Press 0 to Exit: "
 
             );
@@ -48,6 +49,12 @@ public class Smartphone {
                 System.out.println("Enter user name for seach:");
                 String name = scanner.next();
                 phonebook1.searchUser(name);
+            }
+
+            if (menu == 4) {
+                System.out.println("Enter user name for del:");
+                String name = scanner.next();
+                phonebook1.delUser(name);
             }
 
             if (menu == 0) {

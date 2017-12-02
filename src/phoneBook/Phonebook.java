@@ -37,6 +37,19 @@ public class Phonebook {
 
     }
 
+    void delUser(String name) {
+        Friend[] newFriends = new Friend[friends.length-1];
+        int counter = 0;
+        for (int i = 0; i < newFriends.length-1; i++)
+        if (!friends[i].equals(name)){
+            newFriends[counter] = friends[i];
+            counter++;
+        }
+        friends = newFriends;
+        countOfFriends--;
+
+    }
+
     void printAll() {
         System.out.println("You have" + " " + countOfFriends + " " + "friend(s)");
         for (int i = 0; i < friends.length; i++) {
