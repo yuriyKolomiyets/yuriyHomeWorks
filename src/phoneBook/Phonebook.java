@@ -42,15 +42,17 @@ public class Phonebook {
     void delUser(String delName) {
         Friend[] newFriends = new Friend[friends.length-1];
         int counter = 0;
-        for (int i = 0; i < newFriends.length; i++)
-        if (!friends[i].getUserName().equals(delName)){
-            newFriends[counter] = friends[i];   // я так понимаю что проблема в том что тут я
-                                                // указываю на объект, который потом же затираю
-                                                //при переключении ссылки
-            counter++;
+        for (int i = 0; i < newFriends.length; i++) {
+            if (!friends[i].getUserName().equals(delName)) {
+                newFriends[counter] = friends[i];   // я так понимаю что проблема в том что тут я
+                // указываю на объект, который потом же затираю
+                //при переключении ссылки
+                counter++;
+            }
         }
         friends = newFriends;
         countOfFriends--;
+
 
         /*Friend[] newFriends = new Friend[friends.length-1];
         int removedIdx = -1;
