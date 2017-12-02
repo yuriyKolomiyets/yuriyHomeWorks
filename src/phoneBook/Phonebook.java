@@ -53,7 +53,6 @@ public class Phonebook {
         friends = newFriends;
         countOfFriends--;
 
-
         /*Friend[] newFriends = new Friend[friends.length-1];
         int removedIdx = -1;
         for (int i = 0; i < friends.length; i++) {
