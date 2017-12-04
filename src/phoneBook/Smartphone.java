@@ -24,6 +24,7 @@ public class Smartphone {
                     "Press 2 to Print all phonebook: " + "\n" +
                     "Press 3 to Search user in the phonebook: " + "\n" +
                     "Press 4 to Del user in the phonebook: " + "\n" +
+                    "Press 5 to Generate users, and add them to the phonebook: " + "\n" +
                     "Press 0 to Exit: "
 
             );
@@ -56,6 +57,14 @@ public class Smartphone {
                 String delName = scanner.next();
                 phonebook1.delUser(delName);
             }
+
+            if (menu == 5) {
+                System.out.println("Enter number of users to generate:");
+
+                int numGenerate = scanner.nextInt();
+                phonebook1.generateNewUser(numGenerate);
+            }
+
 
             if (menu == 0) {
                 menuFlag = false;

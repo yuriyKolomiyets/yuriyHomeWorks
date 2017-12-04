@@ -4,6 +4,7 @@ import com.sun.tools.javac.util.ArrayUtils;
 
 import java.util.Arrays;
 
+
 public class Phonebook {
 
     private int countOfFriends;
@@ -99,5 +100,59 @@ public class Phonebook {
             System.out.println("Total" + " " + result + " " + "user(s) " + name + " " + "found" );
         }
     }
+
+    public void generateNewUser(int numGenerate) {
+
+        for (int i = 0; i <= numGenerate; i++) {
+
+            int userId = generateUserId(numGenerate);
+            String userName = generateUserName();
+            String userPhoneNumber = generateUserPhoneNumber();
+            int userYearOfBirth = generateUserYearOfBirth();
+            double userWeight = generateUserWeight();
+
+            Friend friend = new Friend(userId, userName, userPhoneNumber, userYearOfBirth, userWeight);
+
+            Friend[] newFriends = Arrays.copyOf(friends, friends.length+1);
+            newFriends[friends.length] = friend;
+            friends = newFriends;
+            countOfFriends++;
+        }
+    }
+
+    public String generateUserPhoneNumber() {
+        String phone = "+380";
+
+        for (int i = 0; i<9; i++){
+            phone += (int)(Math.random()*10);
+        }
+        return phone;
+    }
+
+    public String generateUserName() {
+
+        String[] names =  {"Olga", "Slava", "Yura", "Anfisa", "Katya", "Ivan"};
+        return names[(int)(Math.random()*names.length)];
+
+    }
+
+    public double generateUserWeight() {
+        return generateNum(60, 99);
+    }
+
+    public int generateUserYearOfBirth() {
+        return generateNum(1980, 1999);
+    }
+
+    public int generateUserId(int numGenerate) {
+        return friends.length;
+    }
+
+    public int generateNum(int min, int max) {
+
+        return min + (max - min) * (int)(Math.random()*10);
+
+    }
+
 
 }
