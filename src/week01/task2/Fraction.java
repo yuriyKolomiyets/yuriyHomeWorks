@@ -31,24 +31,16 @@ public class Fraction {
         if (operation == 1) {
             String result = sum(firstNumerator, firstDenominator, secondNumerator, secondDenominator);
             System.out.println(result);
-        }
-
-        if (operation == 2) {
+        } else if (operation == 2) {
             String result = dif(firstNumerator, firstDenominator, secondNumerator, secondDenominator);
             System.out.println(result);
-        }
-
-        if (operation == 3) {
+        } else if (operation == 3) {
             String result = mult(firstNumerator, firstDenominator, secondNumerator, secondDenominator);
             System.out.println(result);
-        }
-
-        if (operation == 4) {
+        } else if (operation == 4) {
             String result = div(firstNumerator, firstDenominator, secondNumerator, secondDenominator);
             System.out.println(result);
-        }
-
-        if (operation == 5) {
+        } else if (operation == 5) {
 
             double firstFrac = (double) firstNumerator / firstDenominator;
             System.out.println(firstFrac);
@@ -58,42 +50,39 @@ public class Fraction {
 
             if (firstFrac > secondFrac) {
                 System.out.println("First fraction is bigger");
-            }
-            else if (firstFrac == secondFrac) {
+            } else if (firstFrac == secondFrac) {
                 System.out.println("Both are equal");
-            }
-            else {
+            } else {
                 System.out.println("Second fraction is bigger");
             }
         }
 
     }
 
-
     static String sum(int firstNumerator, int firstDenominator, int secondNumerator, int secondDenominator) {
         int resultDenominator = firstDenominator * secondDenominator;
-        int resultNumerator = firstNumerator*secondDenominator + secondNumerator* firstDenominator;
+        int resultNumerator = firstNumerator * secondDenominator + secondNumerator * firstDenominator;
 
         return resultNumerator + "/" + resultDenominator;
     }
 
     static String dif(int firstNumerator, int firstDenominator, int secondNumerator, int secondDenominator) {
         int resultDenominator = firstDenominator * secondDenominator;
-        int resultNumerator = firstNumerator*secondDenominator - secondNumerator* firstDenominator;
+        int resultNumerator = firstNumerator * secondDenominator - secondNumerator * firstDenominator;
 
         return resultNumerator + "/" + resultDenominator;
     }
 
     static String mult(int firstNumerator, int firstDenominator, int secondNumerator, int secondDenominator) {
         int resultDenominator = firstDenominator * secondDenominator;
-        int resultNumerator = firstDenominator*firstDenominator;
+        int resultNumerator = firstDenominator * firstDenominator;
 
         return resultNumerator + "/" + resultDenominator;
     }
 
     static String div(int firstNumerator, int firstDenominator, int secondNumerator, int secondDenominator) {
         int resultDenominator = firstDenominator * secondNumerator;
-        int resultNumerator = firstNumerator*secondNumerator;
+        int resultNumerator = firstNumerator * secondNumerator;
 
         return resultNumerator + "/" + resultDenominator;
     }

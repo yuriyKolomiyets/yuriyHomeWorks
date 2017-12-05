@@ -28,44 +28,32 @@ public class Number {
             if (operation == 1) {
                 result = sum(firstNum, secondNum);
                 System.out.println("Result =" + " " + result);
-            }
-
-            if (operation == 2) {
+            } else if (operation == 2) {
                 result = dif(firstNum, secondNum);
                 System.out.println("Result =" + " " + result);
-            }
-
-            if (operation == 3) {
+            } else if (operation == 3) {
                 result = mult(firstNum, secondNum);
                 System.out.println("Result =" + " " + result);
-            }
-            if (operation == 5) {
+            } else if (operation == 5) {
                 result = divRemainder(firstNum, secondNum);
                 System.out.println("Result =" + " " + result);
-            }
-
-            if (operation == 6) {
+            } else if (operation == 6) {
                 // compareTwoNums(firstNum, secondNum) :  How to make this in void method?
 
                 if (firstNum > secondNum) {
                     System.out.println("First number is bigger");
                 }
-                if (firstNum == secondNum) {
+                else if (firstNum == secondNum) {
                     System.out.println("Both numbers are equal");
-                }
-                else {
+                } else {
                     System.out.println("Second number is bigger");
                 }
             }
 
-        }
-
-        else {
+        } else {
             result = factorial(firstNum);
             System.out.println("Result =" + " " + result);
         }
-
-
     }
 
     static int divRemainder(int firstNum, int secondNum) {
@@ -77,16 +65,15 @@ public class Number {
         if (firstNum == 1) {
             return 1;
         }
-        return firstNum * factorial(firstNum-1);
-
+        return firstNum * factorial(firstNum - 1);
     }
 
     static int mult(int firstNum, int secondNum) {
         return firstNum * secondNum;
-
     }
 
     static int dif(int firstNum, int secondNum) {
+
         return firstNum - secondNum;
     }
 
