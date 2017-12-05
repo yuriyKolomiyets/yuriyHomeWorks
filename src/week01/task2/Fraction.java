@@ -56,7 +56,6 @@ public class Fraction {
                 System.out.println("Second fraction is bigger");
             }
         }
-
     }
 
     static String sum(int firstNumerator, int firstDenominator, int secondNumerator, int secondDenominator) {

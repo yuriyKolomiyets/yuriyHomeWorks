@@ -18,12 +18,10 @@ public class Number {
         System.out.println("6. Compare two numbers");
         int operation = scanner.nextInt();
 
-
         if (operation != 4) {
 
             System.out.println("Enter second number:");
             int secondNum = scanner.nextInt();
-
 
             if (operation == 1) {
                 result = sum(firstNum, secondNum);
