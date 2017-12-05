@@ -22,7 +22,5 @@ public class Game {
                 System.out.println("You took " + numOfGuesses + " guesses");
             }
         }
-
-
     }
 }
