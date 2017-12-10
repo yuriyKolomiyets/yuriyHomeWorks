@@ -1,7 +1,5 @@
 package week02.KPI;
-
 import java.util.ArrayList;
-
 
 public class KpiTest {
     public static void main(String[] args) {
@@ -23,7 +21,6 @@ public class KpiTest {
 
         geography.passExam();
         System.out.println((geography.getMarkForTheme() != 1) + " passExam");
-
 
         student1.addTheme(new Theme(10, "Math", 0, 1));
         student1.showSubjectsInfo();
