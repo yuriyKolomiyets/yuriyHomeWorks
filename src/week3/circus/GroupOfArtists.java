@@ -1,7 +1,7 @@
-package week3.Cyrcus;
+package week3.circus;
 
-import week3.Cyrcus.Roles.Artist;
-import week3.Cyrcus.Roles.ArtistComparator;
+import week3.circus.roles.Artist;
+import week3.circus.roles.ArtistComparator;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package week3.Cyrcus.Roles;
+package week3.circus.roles;
 
 public class Clown extends Artist {
 
@@ -9,6 +9,7 @@ public class Clown extends Artist {
 
     public Clown(/*int noseWeight, */String name, double availableMoney, int countOfPlay, int countOfDrinks) {
         super(name, availableMoney, countOfPlay, countOfDrinks);
+        this.setSalary(100);
        // this.noseWeight = noseWeight;
     }
 
@@ -18,10 +19,6 @@ public class Clown extends Artist {
         this.setCountOfPlay(getCountOfPlay() + 1);
     }
 
-    @Override
-    public void setSalary(double salary) {
-        super.setSalary(100);
-    }
 
    /* public int getNoseWeight() {
         return noseWeight;

@@ -1,10 +1,10 @@
-package week3.Tests;
+package week3.tests;
 
-import week3.Cyrcus.GroupOfArtists;
-import week3.Cyrcus.Roles.Acrobat;
-import week3.Cyrcus.Roles.Artist;
-import week3.Cyrcus.Roles.Clown;
-import week3.Cyrcus.Roles.TightropeWalker;
+import week3.circus.GroupOfArtists;
+import week3.circus.roles.Acrobat;
+import week3.circus.roles.Artist;
+import week3.circus.roles.Clown;
+import week3.circus.roles.TightropeWalker;
 
 import java.util.ArrayList;
 

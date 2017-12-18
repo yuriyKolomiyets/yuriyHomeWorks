@@ -1,4 +1,4 @@
-package week3.Cyrcus.Roles;
+package week3.circus.roles;
 
 import java.util.Comparator;
 

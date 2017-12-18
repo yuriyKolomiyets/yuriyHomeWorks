@@ -1,9 +1,10 @@
-package week3.Cyrcus.Roles;
+package week3.circus.roles;
 
 public class TightropeWalker extends Artist {
 
     public TightropeWalker(String name, double availableMoney, int countOfPlay, int countOfDrinks) {
         super(name, availableMoney, countOfPlay, countOfDrinks);
+        this.setSalary(400);
     }
 
     @Override
@@ -12,8 +13,4 @@ public class TightropeWalker extends Artist {
         this.setCountOfPlay(getCountOfPlay() + 1);
     }
 
-    @Override
-    public void setSalary(double salary) {
-        super.setSalary(500);
-    }
 }

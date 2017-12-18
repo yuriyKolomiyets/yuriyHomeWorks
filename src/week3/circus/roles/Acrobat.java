@@ -1,15 +1,12 @@
-package week3.Cyrcus.Roles;
+package week3.circus.roles;
 
 public class Acrobat extends Artist  {
 
     public Acrobat(String name, double availableMoney, int countOfPlay, int countOfDrinks) {
         super(name, availableMoney, countOfPlay, countOfDrinks);
+        this.setSalary(300);
     }
 
-    @Override
-    public void setSalary(double salary) {
-        super.setSalary(300);
-    }
 
     @Override
     public void play(){
