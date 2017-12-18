@@ -52,7 +52,6 @@ public class TestCode {
     }
 
     private static void testPayMoney(GroupOfArtists circusArtists) {
-
         circusArtists.paySalaryForAll();
 
         for (Artist artist : circusArtists.getAllArtists()){
