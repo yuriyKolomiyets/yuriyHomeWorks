@@ -9,8 +9,6 @@ import week3.Cyrcus.Roles.TightropeWalker;
 import java.util.ArrayList;
 
 public class TestCode {
-
-
     public static void main(String[] args) {
 
         GroupOfArtists circusArtists = new GroupOfArtists();
@@ -51,7 +49,6 @@ public class TestCode {
 
         System.out.println("-----");
         testViewAllArtists(circusArtists);
-
     }
 
     private static void testPayMoney(GroupOfArtists circusArtists) {
