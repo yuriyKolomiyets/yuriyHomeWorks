@@ -1,5 +1,8 @@
 package week3.Cyrcus;
 
+import week3.Cyrcus.Roles.Artist;
+import week3.Cyrcus.Roles.ArtistComparator;
+
 import java.util.ArrayList;
 
 public class GroupOfArtists {
@@ -10,35 +13,35 @@ public class GroupOfArtists {
     public GroupOfArtists() {
     }
 
-    void printArtist(Artist artist) {
+    public void printArtist(Artist artist) {
         System.out.println(artist.getName() + ", " + artist.getAvailableMoney() + ", " + artist.getSalary() + ", " +
                 artist.getCountOfPlay() + ", " + artist.getCountOfDrinks());
     }
 
-    void printAllArtists() {
+    public void printAllArtists() {
         System.out.printf("Total number of artists : %d \n", countOfArtists);
         for (Artist artist : allArtists) {
             printArtist(artist);
         }
     }
 
-    void printCountOfPlays(Artist artist) {
+    public void printCountOfPlays(Artist artist) {
         System.out.println(artist.getName() + ", Count of play: " +
                 artist.getCountOfPlay());
     }
 
-    void printAllCountOfPlays() {
+    public void printAllCountOfPlays() {
         for (Artist artist : allArtists) {
             printCountOfPlays(artist);
         }
     }
 
-    void addArtist(Artist artist) {
+    public void addArtist(Artist artist) {
         allArtists.add(artist);
         countOfArtists++;
     }
 
-    void fireArtist(Artist artist) {
+    public void fireArtist(Artist artist) {
         allArtists.remove(artist);
         countOfArtists--;
     }
@@ -61,7 +64,8 @@ public class GroupOfArtists {
 
     public void sortByCountOfdrinks() {
 
-        //
+        ArtistComparator artistComparator = new ArtistComparator();
+        allArtists.sort(artistComparator);
     }
 
     public int getCountOfArtists() {

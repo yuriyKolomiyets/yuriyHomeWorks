@@ -1,15 +1,20 @@
 package week3.Cyrcus;
 
+import week3.Cyrcus.Roles.Acrobat;
+import week3.Cyrcus.Roles.Artist;
+import week3.Cyrcus.Roles.Clown;
+import week3.Cyrcus.Roles.TightropeWalker;
+
 import java.util.ArrayList;
 
 public class World {
 
     public static void main(String[] args) {
 
-        GroupOfArtists cyrcusArtists = new GroupOfArtists();
-        cyrcusArtists.setAdress("Kyiv, Centr");
+        GroupOfArtists circusArtists = new GroupOfArtists();
+        circusArtists.setAdress("Kyiv, Centr");
 
-        cyrcusArtists.setAllArtists(new ArrayList<Artist>(10));
+        circusArtists.setAllArtists(new ArrayList<Artist>(10));
 
         Artist tw1 = new TightropeWalker("Ivan1", 1000, 0, 0);
         Artist tw2 = new TightropeWalker("Ivan2", 2000, 0, 0);
@@ -22,36 +27,37 @@ public class World {
         Artist acrobat2 = new Acrobat("Iurii2", 2550, 0, 0);
         Artist acrobat3 = new Acrobat("Iurii3", 3550, 0, 0);
 
-        cyrcusArtists.addArtist(tw1);
-        cyrcusArtists.addArtist(tw2);
-        cyrcusArtists.addArtist(tw3);
+        circusArtists.addArtist(tw1);
+        circusArtists.addArtist(tw2);
+        circusArtists.addArtist(tw3);
 
-        cyrcusArtists.addArtist(clown1);
-        cyrcusArtists.addArtist(clown2);
+        circusArtists.addArtist(clown1);
+        circusArtists.addArtist(clown2);
 
-        cyrcusArtists.addArtist(acrobat1);
-        cyrcusArtists.addArtist(acrobat2);
-        cyrcusArtists.addArtist(acrobat3);
-
-        //1) посмотреть список артистов.
-
-        cyrcusArtists.printAllArtists();
-
-        //2) нанять на работу нового циркача.
-
-        Artist clown3 = new Clown("Serhii3", 3500, 0, 0);
-        cyrcusArtists.addArtist(clown3);
-
-        // 3) уволить самого пьющего акробата.
+        circusArtists.addArtist(acrobat1);
+        circusArtists.addArtist(acrobat2);
+        circusArtists.addArtist(acrobat3);
 
         acrobat1.drink(2);
         acrobat2.drink(1);
 
-        cyrcusArtists.sortByCountOfdrinks();
+        //1) посмотреть список артистов.
 
-        for (Artist artist : cyrcusArtists.getAllArtists()) {
+        circusArtists.printAllArtists();
+
+        //2) нанять на работу нового циркача.
+
+        Artist clown3 = new Clown("Serhii3", 3500, 0, 0);
+        circusArtists.addArtist(clown3);
+
+        // 3) уволить самого пьющего акробата.
+
+        circusArtists.sortByCountOfdrinks();
+
+        for (Artist artist : circusArtists.getAllArtists()) {
             if (artist instanceof Acrobat) {
-                cyrcusArtists.fireArtist(artist);
+                System.out.println("Fired artist: " + artist.getName());
+                circusArtists.fireArtist(artist);
                 break;
             }
         }
@@ -64,17 +70,15 @@ public class World {
 
         // 5) Узнать сколько раз выступал каждый из сотрудников
 
-        cyrcusArtists.printAllCountOfPlays();
+        circusArtists.printAllCountOfPlays();
 
         //6) Выплалить зарплату артисттам (канатоходцам доп % за риски)
 
-        cyrcusArtists.paySalaryForAll();
-        cyrcusArtists.printAllArtists();
+        circusArtists.paySalaryForAll();
 
         // 7) переехать на другое место
 
-        cyrcusArtists.setAdress("Lviv");
-        System.out.println(cyrcusArtists.getAdress());
+        circusArtists.setAdress("Lviv");
 
     }
 }

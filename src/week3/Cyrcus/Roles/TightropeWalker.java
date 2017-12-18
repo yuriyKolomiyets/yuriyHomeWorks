@@ -1,4 +1,4 @@
-package week3.Cyrcus;
+package week3.Cyrcus.Roles;
 
 public class TightropeWalker extends Artist {
 
@@ -7,7 +7,7 @@ public class TightropeWalker extends Artist {
     }
 
     @Override
-    void play() {
+    public void play() {
         System.out.println("TW works");
         this.setCountOfPlay(getCountOfPlay() + 1);
     }

@@ -1,6 +1,6 @@
-package week3.Cyrcus;
+package week3.Cyrcus.Roles;
 
-abstract class Artist /*implements Comparable<Artist>*/ {
+public class Artist implements ArtistPlay {
     private String name;
     private double availableMoney;
     private double salary;
@@ -17,13 +17,11 @@ abstract class Artist /*implements Comparable<Artist>*/ {
         this.countOfDrinks = countOfDrinks;
     }
 
-    abstract void play();
-
     public void paySalary() {
-        availableMoney = availableMoney + getSalary();
+        availableMoney = availableMoney + salary;
     }
 
-    void drink(int numOfDrink) {
+    public void drink(int numOfDrink) {
         countOfDrinks = countOfDrinks + numOfDrink;
     }
 
@@ -67,8 +65,8 @@ abstract class Artist /*implements Comparable<Artist>*/ {
         this.countOfDrinks = countOfDrinks;
     }
 
-//    @Override
-//    public int compareTo(Artist o) {
-//        return countOfDrinks;
-//    }
+    @Override
+    public void play() {
+
+    }
 }
