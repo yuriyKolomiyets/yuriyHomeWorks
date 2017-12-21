@@ -2,6 +2,7 @@ package week3.circus;
 
 import week3.circus.roles.Artist;
 import week3.circus.roles.ArtistCompareByDrinks;
+import week3.circus.roles.ArtistCompareByPlay;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -69,6 +70,11 @@ public class GroupOfArtists {
         allArtists.sort(artistCompareByDrinks);
     }
 
+    public void sortByCountOfPlay() {
+
+        allArtists.sort(new ArtistCompareByPlay());
+    }
+
     public int getCountOfArtists() {
         return countOfArtists;
     }
@@ -87,11 +93,11 @@ public class GroupOfArtists {
 
     public void sortByName() {
        Artist[] forSort = toArr(allArtists);
-        Arrays.sort(forSort);
-
-        for (int i = 0; i <forSort.length ; i++) {
-            System.out.println(forSort[i].getName());
+       Arrays.sort(forSort);
+        for (int i = 0; i < forSort.length; i++) {
+            allArtists.set(i, forSort[i]);
         }
+
     }
 
     private Artist[] toArr(ArrayList<Artist> allArtists) {
