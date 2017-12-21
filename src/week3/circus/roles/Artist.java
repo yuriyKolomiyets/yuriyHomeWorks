@@ -1,6 +1,6 @@
 package week3.circus.roles;
 
-public class Artist implements ArtistPlay {
+public class Artist implements ArtistPlay, Comparable<Artist> {
     private String name;
     private double availableMoney;
     private double salary;
@@ -68,5 +68,10 @@ public class Artist implements ArtistPlay {
     @Override
     public void play() {
 
+    }
+
+    @Override
+    public int compareTo(Artist o) {
+        return this.getName().compareTo(o.getName());
     }
 }
