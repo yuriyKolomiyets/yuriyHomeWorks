@@ -7,7 +7,6 @@ import week3.circus.roles.Clown;
 import week3.circus.roles.TightropeWalker;
 import java.util.ArrayList;
 
-
 public class TestCompares {
 
     public static void main(String[] args) {
@@ -41,7 +40,6 @@ public class TestCompares {
 
         testSortByName(circusArtists);
         testSortByCountOfPlay(circusArtists);
-
     }
 
     private static void testSortByCountOfPlay(GroupOfArtists circusArtists) {

@@ -97,7 +97,6 @@ public class GroupOfArtists {
         for (int i = 0; i < forSort.length; i++) {
             allArtists.set(i, forSort[i]);
         }
-
     }
 
     private Artist[] toArr(ArrayList<Artist> allArtists) {
