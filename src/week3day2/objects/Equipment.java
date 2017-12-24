@@ -1,4 +1,4 @@
-package week3day2.Objects;
+package week3day2.objects;
 
 public class Equipment {
 

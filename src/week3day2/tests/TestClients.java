@@ -1,6 +1,6 @@
 package week3day2.tests;
 
-import week3day2.GroupOfClients;
+import week3day2.groupsOfPeople.GroupOfClients;
 import week3day2.roles.Admin;
 import week3day2.roles.Client;
 

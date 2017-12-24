@@ -1,7 +1,7 @@
 package week3day2.roles;
 
 import week3day2.Human;
-import week3day2.Objects.Equipment;
+import week3day2.objects.Equipment;
 
 import java.util.ArrayList;
 

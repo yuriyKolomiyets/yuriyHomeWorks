@@ -1,4 +1,4 @@
-package week3day2;
+package week3day2.groupsOfPeople;
 
 import week3day2.roles.Client;
 

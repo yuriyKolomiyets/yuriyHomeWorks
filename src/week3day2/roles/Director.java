@@ -1,6 +1,6 @@
 package week3day2.roles;
 
-import week3day2.GroupOfWorkers;
+import week3day2.groupsOfPeople.GroupOfWorkers;
 import week3day2.Worker;
 
 public class Director extends Worker {
