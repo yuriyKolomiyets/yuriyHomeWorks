@@ -22,7 +22,6 @@ public class Admin extends Worker{
             repairman.getWorkFlow().add(equipment);
         }
     }
-
     // - вернуть отремантированную технику на склад
 
     public void transferEquipmentToSC(ServiceCenter serviceCenter, Repairman repairman) {
