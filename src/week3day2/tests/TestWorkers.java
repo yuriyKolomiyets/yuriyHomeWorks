@@ -1,11 +1,10 @@
 package week3day2.tests;
 
-import week3day2.groupsOfPeople.GroupOfWorkers;
 import week3day2.Human;
 import week3day2.Worker;
+import week3day2.groupsOfPeople.GroupOfWorkers;
 import week3day2.roles.Admin;
 import week3day2.roles.Director;
-
 import java.util.ArrayList;
 
 public class TestWorkers {
@@ -66,5 +65,4 @@ public class TestWorkers {
         director.changeAddress(groupOfWorkers, "Vokzalna");
         System.out.println(groupOfWorkers.getAddress().equals("Vokzalna") + " testChangeAddress");
     }
-
 }

@@ -25,4 +25,8 @@ public class ServiceCenter {
     public void setCountOfEquipment(int countOfEquipment) {
         this.countOfEquipment = countOfEquipment;
     }
+
+    public void add(Equipment equipment) {
+        allEquipmentInSC.add(equipment);
+    }
 }

@@ -3,13 +3,15 @@ package week3day2.objects;
 public class Equipment {
 
     private String equipmentName;
-    private String code;
+    private String equipmentCode;
+    private int equipmentPrice;
     private boolean guarantee;
     private boolean crash;
 
-    public Equipment(String equipmentName, String code, boolean guarantee, boolean crash) {
+    public Equipment(String equipmentName, String code, int price, boolean guarantee, boolean crash) {
         this.equipmentName = equipmentName;
-        this.code = code;
+        this.equipmentCode = code;
+        this.equipmentPrice = price;
         this.guarantee = guarantee;
         this.crash = crash;
     }
@@ -22,12 +24,12 @@ public class Equipment {
         this.equipmentName = equipmentName;
     }
 
-    public String getCode() {
-        return code;
+    public String getEquipmentCode() {
+        return equipmentCode;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    public void setEquipmentCode(String equipmentCode) {
+        this.equipmentCode = equipmentCode;
     }
 
     public boolean isGuarantee() {
@@ -44,5 +46,13 @@ public class Equipment {
 
     public void setCrash(boolean crash) {
         this.crash = crash;
+    }
+
+    public int getEquipmentPrice() {
+        return equipmentPrice;
+    }
+
+    public void setEquipmentPrice(int equipmentPrice) {
+        this.equipmentPrice = equipmentPrice;
     }
 }
