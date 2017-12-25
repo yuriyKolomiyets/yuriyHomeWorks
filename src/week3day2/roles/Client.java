@@ -23,22 +23,30 @@ public class Client extends Human {
         countOfEquipment++;
     }
 
-    public void visitSC(ServiceCenter serviceCenter) {
+    // - сдать товар на ремонт (цена ремонта = 10% от суммы товара)
+
+    public void visitSC(ServiceCenter serviceCenter, Client client) {
+        int repairPrice = 0;
         for (Equipment equipment : clientsEquipments) {
             if (equipment.isCrash() && equipment.isGuarantee()) {
                 serviceCenter.add(equipment);
                 serviceCenter.setCountOfEquipment(serviceCenter.getCountOfEquipment()+1);
+                repairPrice = equipment.getEquipmentPrice()/10;
+                client.setAvailableMoney(client.getAvailableMoney() - repairPrice);
+                serviceCenter.setBankAccount(serviceCenter.getBankAccount() + repairPrice);
             }
-
         }
     }
 
-    // - сдать товар на ремонт
-
-
-
     // - забрать товар по идентификационному коду
 
+    public void pickUpEquipment(ServiceCenter serviceCenter, String equipmentCode){
+        for (Equipment equipment : serviceCenter.getAllEquipmentInSC()) {
+            if (equipment.getEquipmentCode().equalsIgnoreCase(equipmentCode)){
+                clientsEquipments.add(equipment);
+            }
+        }
+    }
 
     public ArrayList<Equipment> getClientsEquipments() {
         return clientsEquipments;

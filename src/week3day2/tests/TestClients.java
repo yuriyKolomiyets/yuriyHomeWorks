@@ -52,10 +52,16 @@ public class TestClients {
         testVisitSC(cl1, serviceCenter);
         testTransferEquipmentToRepairman(serviceCenter, rm1, ad1);
         testRepairAllEquipment(rm1);
-
+        testPickUpEquipment(cl1, serviceCenter, "001");
         System.out.println("---");
         ad1.viewAllClients(allClients);
     }
+
+    private static void testPickUpEquipment(Client client, ServiceCenter serviceCenter, String equipmentCode) {
+        client.pickUpEquipment(serviceCenter, equipmentCode);
+        System.out.println((client.getCountOfEquipment() == 3) + " testPickUpEquipment");
+    }
+
 
     private static void testRepairAllEquipment(Repairman repairman) {
         int crashCheckCounter = 0;
@@ -74,7 +80,7 @@ public class TestClients {
     }
 
     private static void testVisitSC(Client cl1, ServiceCenter serviceCenter) {
-        cl1.visitSC(serviceCenter);
-        System.out.println((serviceCenter.getCountOfEquipment() == 1) + " testVisitSC");
+        cl1.visitSC(serviceCenter, cl1);
+        System.out.println(((serviceCenter.getCountOfEquipment() == 1) && (serviceCenter.getBankAccount() == 50)) + " testVisitSC");
     }
 }

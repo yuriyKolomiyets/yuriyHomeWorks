@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class ServiceCenter {
     private ArrayList<Equipment> allEquipmentInSC;
     private int countOfEquipment;
+    private int bankAccount;
 
     public ServiceCenter(ArrayList<Equipment> allEquipmentInSC) {
         this.allEquipmentInSC = allEquipmentInSC;
@@ -28,5 +29,13 @@ public class ServiceCenter {
 
     public void add(Equipment equipment) {
         allEquipmentInSC.add(equipment);
+    }
+
+    public int getBankAccount() {
+        return bankAccount;
+    }
+
+    public void setBankAccount(int bankAccount) {
+        this.bankAccount = bankAccount;
     }
 }

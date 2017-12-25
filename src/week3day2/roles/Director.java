@@ -11,7 +11,6 @@ public class Director extends Worker {
         super(name, availableMoney, salary);
     }
 
-
     // - сменить место расположения сервисного центра
 
     public void changeAddress(GroupOfWorkers groupOfWorkers, String newAddress) {
