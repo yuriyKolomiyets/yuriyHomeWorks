@@ -1,6 +1,6 @@
 package week04.rec;
 
-public class TreeOperations {
+public interface TreeOperations {
 
     Integer getAmount(Link link);
 }
