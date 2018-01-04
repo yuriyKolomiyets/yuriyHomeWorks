@@ -16,9 +16,7 @@ public class NodeUtils {
     public static String toString(Node chain) {
         if (chain == null) {
             return null;
-        }
-
-        else {
+        } else {
             return chain.value + " -> " + toString(chain.next);
         }
     }
@@ -56,11 +54,24 @@ public class NodeUtils {
     }
 
     public static Node remove(int index, Node chain) {
-            return null;
+
+        int currentIndex = 0;
+        Node leftChain = null;
+        if (currentIndex != index) {
+            if (currentIndex == (index - 1)) {
+                leftChain = chain;
+            } else {
+                currentIndex++;
+                remove(index, chain.next);
+            }
+            leftChain.next = chain.next;
         }
+        return chain;
+    }
 
         // use equals method
-        public static int indexOf (Object target, Node chain){
+
+    public static int indexOf (Object target, Node chain){
             if (chain == null) {
                 return -1;
             }
@@ -72,15 +83,7 @@ public class NodeUtils {
             } else {
                 currentIndex++;
                 indexOf(target, chain.next);
+                return currentIndex;
             }
-
-        // 1,2,3,4,5 - 5,4,3,2,1
-        // create new
-        // use existed, one loop
-        // advanced *
-        public static Node reverse (Node chain){
-            return null;
-        }
-
     }
 }
