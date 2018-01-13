@@ -94,6 +94,4 @@ public class TestAirport {
     private static void flightStatusTest(String date, TimeTable timeTable) {
         System.out.println((timeTable.showFlightStatus(1, date).equalsIgnoreCase("flight in the past")) + " flightStatusTest");
     }
-
-
 }

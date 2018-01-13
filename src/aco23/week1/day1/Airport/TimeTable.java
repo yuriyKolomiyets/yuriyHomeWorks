@@ -54,7 +54,6 @@ public class TimeTable {
             }
         }
         return null;
-
     }
 
     public ArrayList<Flight> getFlightList() {
