@@ -1,6 +1,4 @@
-package aco23.week1.day1.Passendgers;
-
-import java.util.Date;
+package aco23.week1.day1.passendgers;
 
 public class Passport {
 
