@@ -68,7 +68,6 @@ public class TestAirport {
 
                 flight1.checkIn(checkInId, passengerList);
 
-
             } else if (menu == 4) {
                 System.out.println("Enter your flight number: ");
                 int flightNum = scanner.nextInt();
@@ -79,13 +78,11 @@ public class TestAirport {
                 checkInTest(flight1, passengerList);
                 flightStatusTest(date, timeTable);
 
-
             } else if (menu == 0) {
                 menuFlag = false;
             }
         }
     }
-
     public static void checkInTest(Flight flight1, PassengerList passengerList) {
         flight1.checkIn(1, passengerList);
         System.out.println((flight1.getFlightPassengersList().size() == 1) + " checkInTest");
