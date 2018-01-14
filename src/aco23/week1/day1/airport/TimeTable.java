@@ -1,10 +1,11 @@
 package aco23.week1.day1.airport;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TimeTable {
 
-    private ArrayList<Flight> flightList;
+    private List<Flight> flightList;
 
     public TimeTable() {
     }
@@ -56,11 +57,11 @@ public class TimeTable {
         return null;
     }
 
-    public ArrayList<Flight> getFlightList() {
+    public List<Flight> getFlightList() {
         return flightList;
     }
 
-    public void setFlightList(ArrayList<Flight> flightList) {
+    public void setFlightList(List<Flight> flightList) {
         this.flightList = flightList;
     }
 }

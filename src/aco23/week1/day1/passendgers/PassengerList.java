@@ -1,15 +1,16 @@
 package aco23.week1.day1.passendgers;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class PassengerList {
 
-    private ArrayList <User> passengerList;
+    private List<User> passengerList;
 
     public PassengerList() {
     }
 
-    public PassengerList(ArrayList<User> passengerList) {
+    public PassengerList(List<User> passengerList) {
         this.passengerList = passengerList;
     }
 
@@ -17,11 +18,11 @@ public class PassengerList {
         passengerList.add(user);
     }
 
-    public ArrayList<User> getPassengerList() {
+    public List<User> getPassengerList() {
         return passengerList;
     }
 
-    public void setPassengerList(ArrayList<User> passengerList) {
+    public void setPassengerList(List<User> passengerList) {
         this.passengerList = passengerList;
     }
 }
