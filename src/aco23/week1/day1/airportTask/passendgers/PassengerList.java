@@ -1,6 +1,5 @@
-package aco23.week1.day1.passendgers;
+package aco23.week1.day1.airportTask.passendgers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PassengerList {

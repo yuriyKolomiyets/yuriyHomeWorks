@@ -1,4 +1,4 @@
-package aco23.week1.day1.airport;
+package aco23.week1.day1.airportTask.airport;
 
 import java.util.ArrayList;
 import java.util.List;

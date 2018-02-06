@@ -1,10 +1,10 @@
-package aco23.week1.day1.test;
+package aco23.week1.day1.airportTask.test;
 
-import aco23.week1.day1.airport.Flight;
-import aco23.week1.day1.airport.TimeTable;
-import aco23.week1.day1.passendgers.PassengerList;
-import aco23.week1.day1.passendgers.Passport;
-import aco23.week1.day1.passendgers.User;
+import aco23.week1.day1.airportTask.airport.Flight;
+import aco23.week1.day1.airportTask.airport.TimeTable;
+import aco23.week1.day1.airportTask.passendgers.PassengerList;
+import aco23.week1.day1.airportTask.passendgers.Passport;
+import aco23.week1.day1.airportTask.passendgers.User;
 
 import java.util.ArrayList;
 import java.util.Scanner;

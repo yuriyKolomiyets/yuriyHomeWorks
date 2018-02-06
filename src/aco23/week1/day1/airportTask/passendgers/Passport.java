@@ -1,4 +1,4 @@
-package aco23.week1.day1.passendgers;
+package aco23.week1.day1.airportTask.passendgers;
 
 public class Passport {
 
