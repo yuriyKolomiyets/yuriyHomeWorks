@@ -1,4 +1,4 @@
-package aco11_1.SeaBattle;
+package headfirst.SeaBattle;
 
 import java.io.*;
 

@@ -1,4 +1,4 @@
-package aco11_1.SeaBattle;
+package headfirst.SeaBattle;
 
 public class SimpleDotComTestDrive {
     public static void main(String[] args) {
