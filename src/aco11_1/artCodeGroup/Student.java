@@ -76,4 +76,12 @@ public class Student {
     }
 
 
+    public Object getAge() {
+        return yearOfBirth;
+    }
+
+    public Object getIdNum() {
+        return userId;
+
+    }
 }
