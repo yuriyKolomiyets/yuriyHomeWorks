@@ -23,7 +23,7 @@ public class TestIOUtils {
 
         try {
             byte[] copy = IOUtils.getBytesWithBuff(FILE_SOURCE);
-            IOUtils.writeInto(copy,FILE_DESTINATION);
+            IOUtils.writeInto(copy, FILE_DESTINATION);
 
             File file = new File(FILE_DESTINATION);
             System.out.println(file.exists());

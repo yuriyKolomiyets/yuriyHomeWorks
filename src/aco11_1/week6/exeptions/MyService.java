@@ -13,11 +13,11 @@ public class MyService {
     public static String login(String name, String pass) throws InvalidCredentialException, ServiceDosentWorkException {
 
         Calendar calendar = new GregorianCalendar();
-        if(calendar.get(Calendar.DAY_OF_WEEK) < 6){
+        if (calendar.get(Calendar.DAY_OF_WEEK) < 6) {
             throw new ServiceDosentWorkException("use service in weekdays only");
         }
 
-        if("admin".equals(name) && "1234".equals(pass)){
+        if ("admin".equals(name) && "1234".equals(pass)) {
             return String.valueOf(genRandomKey());
         } else {
 
@@ -26,7 +26,7 @@ public class MyService {
     }
 
     private static int genRandomKey() {
-        return (int)(System.currentTimeMillis() * Math.random());
+        return (int) (System.currentTimeMillis() * Math.random());
     }
 
 }

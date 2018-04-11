@@ -8,6 +8,6 @@ public class TestWriteInto {
     public static final String RELATIVE_TEMP_PATH = "temp";
 
     public static void main(String[] args) {
-        IOUtils.writeIntoFile(Arrays.asList("line1\n","line2\n","line3\n"), RELATIVE_TEMP_PATH + "/out.txt");
+        IOUtils.writeIntoFile(Arrays.asList("line1\n", "line2\n", "line3\n"), RELATIVE_TEMP_PATH + "/out.txt");
     }
 }

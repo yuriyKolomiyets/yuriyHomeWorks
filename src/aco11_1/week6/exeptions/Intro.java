@@ -8,13 +8,13 @@ public class Intro {
             String res = MyService.login("admin2", "123");
             System.out.println(res);
 
-        } catch (InvalidCredentialException e){
+        } catch (InvalidCredentialException e) {
             System.err.println(e.getMessage());
             //MyService.login("admin", "1234");
             // do another action
-        } catch (ServiceDosentWorkException e){
+        } catch (ServiceDosentWorkException e) {
             e.printStackTrace();
-        } catch (Exception ex){
+        } catch (Exception ex) {
 
         }
         //???

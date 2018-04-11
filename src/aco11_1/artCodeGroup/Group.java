@@ -8,6 +8,8 @@ public class Group {
     private int counterNumsofStudent = 0;
     private Student[] students;
 
+
+
     public Group(Student[] students) {
         this.students = students;
         counterNumsofStudent = students.length;
